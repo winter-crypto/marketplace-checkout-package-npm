@@ -35,14 +35,30 @@ import { WinterCheckout } from 'winter-marketplace-checkout';
 
 ### Params:
 
-#### YOUR PROJECT ID
-
-Get this from the Winter team :)
-
-#### PRODUCTION
-
-false if you're testing in sandbox, true when you go live!
-
 #### showModal
 
-this toggles true / false based on the state of your "Pay with Card" button
+A boolean that determines if the checkout is open
+
+#### contractAddress
+
+The contract address of the NFT that you want to see
+
+#### tokenId
+
+The token id of the NFT that you want to see
+
+#### production
+
+If true it points to mainnet. If false it points to goerli.
+
+#### orderSource
+
+Will only source orders from this marketplace - don't pass in this var if you are an aggregator that facilitates purchases to other marketplaces
+
+#### fillSource
+
+For analytics purposes this will show us which marketplace the purchase came through
+
+#### onClose
+
+This the function that will be called when people try to close the modal
